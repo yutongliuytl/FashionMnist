@@ -63,7 +63,9 @@ saver.restore(sess = session, save_path = "/tmp/model.ckpt")
 print("Model restored.")
 
 # Predictions
-predict_dataset = test_x[0].reshape(-1, 28, 28, 1) 
+predict_dataset = test_x[0].reshape(-1, 28, 28, 1)
+predict_dataset = predict_dataset.astype('float32') / 255
+
 
 classification = session.run(tf.argmax(prediction, 1), feed_dict={features: predict_dataset})
 print("Prediction: {}".format(classification[0]))

@@ -1,11 +1,3 @@
-# Display the first image in training data
-# plt.figure(figsize=[5,5])
-# plt.subplot(121)
-# curr_img = np.reshape(train_x[10], (28,28))
-# plt.imshow(curr_img, cmap='gray')
-# plt.title("(Label: " + str(label_dict[train_y[10]]) + ")")
-# plt.waitforbuttonpress()
-
 import tensorflow as tf 
 import numpy as np 
 import matplotlib
